@@ -13,7 +13,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -31,37 +32,46 @@
     main {
       width: min(900px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 64px 0 52px;
+      padding: 58px 0 52px;
       text-align: center;
     }
 
-    .brand {
-      margin: 0;
-      font-size: 2.6rem;
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: -0.045em;
-    }
+    /* BULB — PRIMARY VISUAL */
 
     .bulb {
-      margin: 28px auto 34px;
+      margin: 0 auto 26px;
     }
 
     .bulb img {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       object-fit: contain;
       display: block;
       margin: 0 auto;
     }
 
+    /* BRAND */
+
+    .brand {
+      margin: 0 0 6px;
+      font-size: 1.9rem;
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+
+    /* MAIN PROPOSITION */
+
     h1 {
       margin: 0 auto;
-      font-size: clamp(2.5rem, 5vw, 3.7rem);
-      line-height: 1.06;
-      letter-spacing: -0.045em;
-      font-weight: 600;
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(3rem, 6vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+      font-weight: 400;
     }
+
+    /* INTRO */
 
     .intro {
       max-width: 650px;
@@ -69,6 +79,8 @@
       font-size: 1.15rem;
       color: #bdbdbd;
     }
+
+    /* LANGUAGES */
 
     .language-section {
       margin-top: 58px;
@@ -99,6 +111,8 @@
       opacity: 0.7;
     }
 
+    /* CLOSING BRAND STATEMENT */
+
     footer {
       margin: 72px auto 0;
       max-width: 650px;
@@ -106,10 +120,10 @@
 
     .promise {
       margin: 0;
-      font-size: 1.55rem;
-      line-height: 1.35;
-      font-weight: 600;
-      letter-spacing: -0.025em;
+      font-family: "DM Serif Display", serif;
+      font-size: 1.9rem;
+      line-height: 1.3;
+      font-weight: 400;
     }
 
     .download {
@@ -118,23 +132,29 @@
       font-size: 1rem;
     }
 
+    /* MOBILE */
+
     @media (max-width: 650px) {
       main {
         width: calc(100% - 32px);
-        padding-top: 44px;
+        padding-top: 40px;
       }
 
-      .brand {
-        font-size: 2.2rem;
+      .bulb {
+        margin-bottom: 22px;
       }
 
       .bulb img {
-        width: 105px;
-        height: 105px;
+        width: 135px;
+        height: 135px;
+      }
+
+      .brand {
+        font-size: 1.7rem;
       }
 
       h1 {
-        font-size: 2.45rem;
+        font-size: 3rem;
       }
 
       .intro {
@@ -151,7 +171,7 @@
       }
 
       .promise {
-        font-size: 1.35rem;
+        font-size: 1.65rem;
       }
     }
   </style>
@@ -161,15 +181,15 @@
 
   <main>
 
-    <div class="brand">Lumi</div>
-
     <div class="bulb">
       <img
         id="lumi-bulb"
-        src="/assets/bulbicon.png"
+        src="/assets/bulb_red.png"
         alt="Lumi electricity price indicator"
       >
     </div>
+
+    <div class="brand">Lumi</div>
 
     <h1>Electricity Made Easy.</h1>
 
@@ -212,20 +232,17 @@
     const bulb = document.getElementById("lumi-bulb");
 
     const sequence = [
-      { src: "/assets/bulbicon.png", duration: 1500 },
-      { src: "/assets/bulb_red.png", duration: 1000 },
-      { src: "/assets/bulb_yellow.png", duration: 1000 },
-      { src: "/assets/bulb_green.png", duration: 1500 }
+      { src: "/assets/bulb_red.png", duration: 1200 },
+      { src: "/assets/bulb_yellow.png", duration: 1200 },
+      { src: "/assets/bulb_green.png", duration: 1200 }
     ];
 
     let current = 0;
 
     function rotateBulb() {
       bulb.src = sequence[current].src;
-
       const duration = sequence[current].duration;
       current = (current + 1) % sequence.length;
-
       setTimeout(rotateBulb, duration);
     }
 
