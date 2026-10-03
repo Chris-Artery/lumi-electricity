@@ -35,10 +35,10 @@
       text-align: center;
     }
 
-    /* BULB */
+    /* BRAND BLOCK */
 
-    .bulb {
-      margin: 0 auto 4px;
+    .brand-block {
+      margin: 0 auto 80px;
     }
 
     .bulb img {
@@ -49,17 +49,15 @@
       margin: 0 auto;
     }
 
-    /* LUMI */
-
     .brand {
-      margin: 0 0 8px;
+      margin: 8px 0 0;
       font-size: 2.5rem;
       line-height: 1.1;
       font-weight: 700;
       letter-spacing: 0.04em;
     }
 
-    /* MAIN PROPOSITION */
+    /* CONTENT BLOCK */
 
     h1 {
       margin: 0 auto;
@@ -69,11 +67,9 @@
       font-weight: 500;
     }
 
-    /* INTRO */
-
     .intro {
       max-width: 650px;
-      margin: 44px auto 0;
+      margin: 20px auto 0;
       font-size: 1.15rem;
       color: #bdbdbd;
     }
@@ -111,10 +107,12 @@
 
     /* CLOSING */
 
-    footer {
-      margin: 72px auto 0;
-      max-width: 650px;
-    }
+   footer {
+  margin: 72px auto 0;
+  padding-top: 32px;
+  max-width: 650px;
+  border-top: 1px solid #242424;
+}
 
     .promise {
       margin: 0;
@@ -138,6 +136,10 @@
         padding-top: 40px;
       }
 
+      .brand-block {
+        margin-bottom: 60px;
+      }
+
       .bulb img {
         width: 135px;
         height: 135px;
@@ -152,7 +154,7 @@
       }
 
       .intro {
-        margin-top: 36px;
+        margin-top: 18px;
         font-size: 1.05rem;
       }
 
@@ -176,15 +178,19 @@
 
   <main>
 
-    <div class="bulb">
-      <img
-        id="lumi-bulb"
-        src="/assets/bulb_red.png"
-        alt="Lumi electricity price indicator"
-      >
-    </div>
+    <div class="brand-block">
 
-    <div class="brand">Lumi</div>
+      <div class="bulb">
+        <img
+          id="lumi-bulb"
+          src="/assets/bulb_red.png"
+          alt="Lumi electricity price indicator"
+        >
+      </div>
+
+      <div class="brand">Lumi</div>
+
+    </div>
 
     <h1>Electricity Made Easy.</h1>
 
@@ -196,6 +202,7 @@
     </p>
 
     <section class="language-section">
+
       <h2>Choose your language</h2>
 
       <nav class="languages" aria-label="Languages">
@@ -214,6 +221,7 @@
         <a href="/lv/" lang="lv">Latviešu</a>
         <a href="/lt/" lang="lt">Lietuvių</a>
       </nav>
+
     </section>
 
     <footer>
