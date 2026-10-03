@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lumi | Managing Electricity Made Easy</title>
+
+  <meta name="description" content="Clear, practical information about household electricity for everyday people across Europe — from electricity prices and energy-saving tips to simple explanations of how electricity and energy markets work.">
+
+  <link rel="canonical" href="https://lumi.arterytechnologies.com/">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      width: min(860px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 72px 0 48px;
+    }
+
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 40px;
+    }
+
+    .bulb {
+      margin-bottom: 42px;
+    }
+
+    .bulb img {
+      width: 112px;
+      height: 112px;
+      object-fit: contain;
+      display: block;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+      font-weight: 600;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: #bdbdbd;
+    }
+
+    .language-section {
+      margin-top: 64px;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 1.35rem;
+      font-weight: 500;
+    }
+
+    .languages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+    }
+
+    .languages a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #555;
+      padding-bottom: 2px;
+    }
+
+    .languages a:hover {
+      border-color: #fff;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 28px;
+      border-top: 1px solid #242424;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer p:first-child {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    footer p:last-child {
+      margin-top: 8px;
+      color: #bdbdbd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <header class="brand">
+      Lumi
+    </header>
+
+    <div class="bulb">
+      <img
+        id="lumi-bulb"
+        src="/assets/bulbicon.png"
+        alt="Lumi electricity price indicator"
+      >
+    </div>
+
+    <h1>Managing Electricity Made Easy.</h1>
+
+    <p class="intro">
+      Clear, practical information about household electricity for everyday
+      people across Europe. Understand electricity prices, find ways to save
+      energy, learn the language of electricity and discover how the market
+      behind your household bill actually works.
+    </p>
+
+    <section class="language-section">
+      <h2>Choose your language</h2>
+
+      <nav class="languages" aria-label="Languages">
+        <a href="/en/">English</a>
+        <a href="/sv/" lang="sv">Svenska</a>
+        <a href="/no/" lang="no">Norsk</a>
+        <a href="/da/" lang="da">Dansk</a>
+        <a href="/fi/" lang="fi">Suomi</a>
+        <a href="/de/" lang="de">Deutsch</a>
+        <a href="/fr/" lang="fr">Français</a>
+        <a href="/nl/" lang="nl">Nederlands</a>
+        <a href="/pl/" lang="pl">Polski</a>
+        <a href="/et/" lang="et">Eesti</a>
+        <a href="/lv/" lang="lv">Latviešu</a>
+        <a href="/lt/" lang="lt">Lietuvių</a>
+      </nav>
+    </section>
+
+    <footer>
+      <p>Life should be easy. Electricity prices too.</p>
+      <p>Download Lumi for an easy life.</p>
+    </footer>
+
+  </main>
+
+  <script>
+    const bulb = document.getElementById("lumi-bulb");
+
+    const sequence = [
+      { src: "/assets/bulbicon.png", duration: 1500 },
+      { src: "/assets/bulb_red.png", duration: 1000 },
+      { src: "/assets/bulb_yellow.png", duration: 1000 },
+      { src: "/assets/bulb_green.png", duration: 1500 }
+    ];
+
+    let current = 0;
+
+    function rotateBulb() {
+      bulb.src = sequence[current].src;
+
+      const duration = sequence[current].duration;
+
+      current = (current + 1) % sequence.length;
+
+      setTimeout(rotateBulb, duration);
+    }
+
+    rotateBulb();
+  </script>
+
+</body>
+</html>
