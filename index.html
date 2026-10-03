@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Lumi | Managing Electricity Made Easy</title>
+  <title>Lumi | Electricity Made Easy</title>
 
   <meta name="description" content="Clear, practical information about household electricity for everyday people across Europe — from electricity prices and energy-saving tips to simple explanations of how electricity and energy markets work.">
 
@@ -35,35 +35,34 @@
     }
 
     .brand {
-      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 48px;
+      font-size: 2.25rem;
       font-weight: 600;
-      letter-spacing: -0.03em;
-      margin-bottom: 40px;
+      letter-spacing: -0.04em;
     }
 
-    .bulb {
-      margin-bottom: 42px;
-    }
-
-    .bulb img {
-      width: 112px;
-      height: 112px;
+    .brand img {
+      width: 80px;
+      height: 80px;
       object-fit: contain;
-      display: block;
+      flex-shrink: 0;
     }
 
     h1 {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0;
-      font-size: clamp(2.6rem, 7vw, 5rem);
-      line-height: 1.03;
-      letter-spacing: -0.055em;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.06;
+      letter-spacing: -0.045em;
       font-weight: 600;
     }
 
     .intro {
       max-width: 680px;
-      margin-top: 30px;
+      margin-top: 28px;
       font-size: 1.2rem;
       color: #bdbdbd;
     }
@@ -115,6 +114,30 @@
       margin-top: 8px;
       color: #bdbdbd;
     }
+
+    @media (max-width: 600px) {
+      main {
+        width: min(100% - 32px, 860px);
+        padding-top: 48px;
+      }
+
+      .brand {
+        margin-bottom: 40px;
+      }
+
+      .brand img {
+        width: 68px;
+        height: 68px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .intro {
+        font-size: 1.05rem;
+      }
+    }
   </style>
 </head>
 
@@ -123,18 +146,15 @@
   <main>
 
     <header class="brand">
-      Lumi
-    </header>
-
-    <div class="bulb">
       <img
         id="lumi-bulb"
         src="/assets/bulbicon.png"
         alt="Lumi electricity price indicator"
       >
-    </div>
+      <span>Lumi</span>
+    </header>
 
-    <h1>Managing Electricity Made Easy.</h1>
+    <h1>Electricity Made Easy.</h1>
 
     <p class="intro">
       Clear, practical information about household electricity for everyday
@@ -185,7 +205,6 @@
       bulb.src = sequence[current].src;
 
       const duration = sequence[current].duration;
-
       current = (current + 1) % sequence.length;
 
       setTimeout(rotateBulb, duration);
