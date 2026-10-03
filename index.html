@@ -107,7 +107,7 @@
 
     /* CLOSING */
 
-    footer {
+    .closing {
       margin: 72px auto 0;
       padding-top: 32px;
       max-width: 650px;
@@ -126,6 +126,36 @@
       margin: 12px 0 0;
       color: #bdbdbd;
       font-size: 1rem;
+    }
+
+    /* LEGAL FOOTER */
+
+    .site-footer {
+      margin: 54px auto 0;
+      color: #737373;
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .site-footer .company {
+      margin: 0 0 4px;
+    }
+
+    .site-footer .footer-links {
+      margin: 0;
+    }
+
+    .site-footer a {
+      color: #737373;
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      color: #bdbdbd;
+    }
+
+    .site-footer .separator {
+      margin: 0 8px;
     }
 
     /* MOBILE */
@@ -163,12 +193,16 @@
         max-width: 360px;
       }
 
-      footer {
+      .closing {
         margin-top: 60px;
       }
 
       .promise {
         font-size: 1.4rem;
+      }
+
+      .site-footer {
+        margin-top: 46px;
       }
     }
   </style>
@@ -248,7 +282,7 @@
 
     <!-- CLOSING -->
 
-    <footer>
+    <section class="closing">
 
       <p class="promise">
         Life should be easy. Electricity prices too.
@@ -256,6 +290,31 @@
 
       <p class="download">
         Download Lumi for an easy life.
+      </p>
+
+    </section>
+
+
+    <!-- LEGAL / CONTACT -->
+
+    <footer class="site-footer">
+
+      <p class="company">
+        Artery Technologies
+      </p>
+
+      <p class="footer-links">
+
+        <a
+          href="https://app.notion.com/p/Lumi-Legal-3ee02c91270a8092a7d9ecd0b8e4a604?source=copy_link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Legal</a>
+
+        <span class="separator">·</span>
+
+        <a href="mailto:lumi@arterytechnologies.com">Contact</a>
+
       </p>
 
     </footer>
