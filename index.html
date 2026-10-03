@@ -6,7 +6,7 @@
 
   <title>Lumi | Electricity Made Easy</title>
 
-  <meta name="description" content="Clear, practical information about household electricity for everyday people across Europe — from electricity prices and energy-saving tips to simple explanations of how electricity and energy markets work.">
+  <meta name="description" content="Lumi makes electricity easy. Understand electricity prices at a glance and find clear, practical information about household electricity across Europe.">
 
   <link rel="canonical" href="https://lumi.arterytechnologies.com/">
   <meta name="robots" content="index, follow">
@@ -38,34 +38,40 @@
     /* BULB */
 
     .bulb {
-      margin: 0 auto 15px;
+      margin: 0 auto 18px;
     }
 
     .bulb img {
-      width: 200px;
-      height: 200px;
+      width: 210px;
+      height: 210px;
       object-fit: contain;
       display: block;
       margin: 0 auto;
     }
 
-    /* MAIN STATEMENT */
+    /* HEADLINES */
 
-    h1 {
+    .section-title {
       margin: 0 auto;
       font-size: clamp(2.6rem, 5vw, 3.5rem);
       line-height: 1.08;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.01em;
       font-weight: 500;
     }
 
-    /* INTRO */
+    /* PARAGRAPHS */
 
-    .intro {
+    .section-copy {
       max-width: 650px;
       margin: 22px auto 0;
       font-size: 1.15rem;
       color: #bdbdbd;
+    }
+
+    /* SECOND LUMI SECTION */
+
+    .lumi-section {
+      margin-top: 76px;
     }
 
     /* LANGUAGES */
@@ -74,7 +80,7 @@
       margin-top: 58px;
     }
 
-    h2 {
+    .language-section h2 {
       margin: 0 0 26px;
       font-size: 1.3rem;
       font-weight: 600;
@@ -131,7 +137,7 @@
       }
 
       .bulb {
-        margin-bottom: 42px;
+        margin-bottom: 24px;
       }
 
       .bulb img {
@@ -139,13 +145,17 @@
         height: 135px;
       }
 
-      h1 {
+      .section-title {
         font-size: 2.5rem;
       }
 
-      .intro {
+      .section-copy {
         margin-top: 20px;
         font-size: 1.05rem;
+      }
+
+      .lumi-section {
+        margin-top: 64px;
       }
 
       .languages {
@@ -168,6 +178,8 @@
 
   <main>
 
+    <!-- LUMI PRODUCT -->
+
     <div class="bulb">
       <img
         id="lumi-bulb"
@@ -176,20 +188,44 @@
       >
     </div>
 
-    <h1>Lumi.   Electricity made easy.</h1>
+    <section class="product-section">
 
-    <p class="intro">
-      Clear, practical information about household electricity for everyday
-      people across Europe. Understand electricity prices, find ways to save
-      energy, learn the language of electricity and discover how the market
-      behind your household bill actually works.
-    </p>
+      <h1 class="section-title">Electricity made easy.</h1>
+
+      <p class="section-copy">
+        Lumi turns official electricity prices into colours you understand immediately.
+        See when electricity is cheap, normal or expensive — without having to read
+        charts or calculate prices yourself. With one colour and one glance, it does
+        not get easier to manage your electricity.
+      </p>
+
+    </section>
+
+
+    <!-- LUMI KNOWLEDGE -->
+
+    <section class="lumi-section">
+
+      <h2 class="section-title">Lumi.</h2>
+
+      <p class="section-copy">
+        In our mission to make electricity easy for everyone, Lumi also provides clear,
+        practical information about household electricity. Understand electricity prices,
+        find ways to save energy, learn the language of electricity and discover how the
+        market behind your household bill actually works.
+      </p>
+
+    </section>
+
+
+    <!-- LANGUAGES -->
 
     <section class="language-section">
 
       <h2>Choose your language</h2>
 
       <nav class="languages" aria-label="Languages">
+
         <a href="/en/">English</a>
         <a href="/sv/" lang="sv">Svenska</a>
         <a href="/no/" lang="no">Norsk</a>
@@ -204,16 +240,30 @@
         <a href="/et/" lang="et">Eesti</a>
         <a href="/lv/" lang="lv">Latviešu</a>
         <a href="/lt/" lang="lt">Lietuvių</a>
+
       </nav>
 
     </section>
 
+
+    <!-- CLOSING -->
+
     <footer>
-      <p class="promise">Life should be easy. Electricity prices too.</p>
-      <p class="download">Download Lumi for an easy life.</p>
+
+      <p class="promise">
+        Life should be easy. Electricity prices too.
+      </p>
+
+      <p class="download">
+        Download Lumi for an easy life.
+      </p>
+
     </footer>
 
   </main>
+
+
+  <!-- BULB ROTATION -->
 
   <script>
     const bulb = document.getElementById("lumi-bulb");
